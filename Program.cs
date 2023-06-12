@@ -1,6 +1,6 @@
 ﻿// Screen Sound
 string mensagemBoasVindas = "Boas vindas ao Screen Sound";
-List<string> bandasRegistradas = new List<string>();
+List<string> bandasRegistradas = new List<string>{"Avenged Sevenfold", "NX Zero", "Guerreiros do Trovão", "Pizadeiro do Luffy"};
 
 void ExibirLogo()
 {
@@ -62,7 +62,8 @@ void MostrarBandasRegistradas(){
     Console.WriteLine("Essas são todas as bandas registradas até agora: ");
     for (int i = 0; i < bandasRegistradas.Count; i++) 
     {
-        Console.WriteLine($"Banda: {bandasRegistradas[i]}");
+        int indice = i + 1;
+        Console.WriteLine($"Banda {indice}: {bandasRegistradas[i]}");
     }
     Console.WriteLine("Aperte qualquer tecla para retornar ao menu principal");
     Console.ReadKey();
