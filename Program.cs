@@ -1,6 +1,8 @@
 ﻿// Screen Sound
 string mensagemBoasVindas = "Boas vindas ao Screen Sound";
-List<string> bandasRegistradas = new List<string>{"Avenged Sevenfold", "NX Zero", "Guerreiros do Trovão", "Pizadeiro do Luffy"};
+//List<string> bandasRegistradas = new List<string>{"Avenged Sevenfold", "NX Zero", "Guerreiros do Trovão", "Pizadeiro do Luffy"};
+
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 
 void ExibirLogo()
 {
@@ -49,7 +51,7 @@ void RegistrarBanda(){
     Console.WriteLine("Registro de Bandas");
     Console.Write("Digite o nome da banda que deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
-    bandasRegistradas.Add(nomeDaBanda);
+    bandasRegistradas.Add(nomeDaBanda, new List<int>());
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso");
     Thread.Sleep(2000);
     Console.Clear();
@@ -60,11 +62,18 @@ void RegistrarBanda(){
 void MostrarBandasRegistradas(){
     Console.Clear();
     Console.WriteLine("Essas são todas as bandas registradas até agora: ");
-    for (int i = 0; i < bandasRegistradas.Count; i++) 
-    {
-        int indice = i + 1;
-        Console.WriteLine($"Banda {indice}: {bandasRegistradas[i]}");
+    //for (int i = 0; i < bandasRegistradas.Count; i++) 
+   // {
+    //    int indice = i + 1;
+    //    Console.WriteLine($"Banda {indice}: {bandasRegistradas[i]}");
+   // }
+
+    int indice = 1;
+    foreach(string banda in bandasRegistradas.Keys){
+        Console.WriteLine($"Banda {indice}: {banda}");
+        indice++;
     }
+
     Console.WriteLine("Aperte qualquer tecla para retornar ao menu principal");
     Console.ReadKey();
     Console.Clear();
