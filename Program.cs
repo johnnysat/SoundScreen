@@ -40,7 +40,7 @@ void ExibirOpcoesDoMenu()
             break;
         case 2: MostrarBandasRegistradas();
             break;
-        case 3: Console.WriteLine("Você escolheu a opção " + opcaoEscolhida);
+        case 3: AvaliarBanda();
             break;
         case 4: Console.WriteLine("Você escolheu a opção " + opcaoEscolhida);
             break;
@@ -84,6 +84,11 @@ void MostrarBandasRegistradas(){
     Console.Clear();
 
     ExibirOpcoesDoMenu();
+}
+
+void AvaliarBanda(){
+    //Escolher banda que deseja avaliar
+    //Atribuir uma nota
 }
 
 ExibirLogo();
