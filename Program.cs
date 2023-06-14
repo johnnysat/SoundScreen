@@ -3,6 +3,11 @@ string mensagemBoasVindas = "Boas vindas ao Screen Sound";
 //List<string> bandasRegistradas = new List<string>{"Avenged Sevenfold", "NX Zero", "Guerreiros do Trovão", "Pizadeiro do Luffy"};
 
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
+bandasRegistradas.Add("Link Park", new List<int>{10, 8, 6});
+bandasRegistradas.Add("Avenged Sevenfold", new List<int>{8, 9, 9, 10});
+bandasRegistradas.Add("Mamonas Assassinas", new List<int>());
+
+
 
 void ExibirLogo()
 {
