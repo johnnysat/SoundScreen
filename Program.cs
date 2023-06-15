@@ -100,6 +100,7 @@ void AvaliarBanda(){
         Console.WriteLine($"A banda {bandaAvaliada} não foi encontrada");
         Console.WriteLine("Aperte qualquer tecla para retornar ao menu principal");
         Console.ReadKey();
+        Console.Clear();
         ExibirOpcoesDoMenu();
     }
     
