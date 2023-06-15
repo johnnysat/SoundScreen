@@ -3,7 +3,7 @@ string mensagemBoasVindas = "Boas vindas ao Screen Sound";
 //List<string> bandasRegistradas = new List<string>{"Avenged Sevenfold", "NX Zero", "Guerreiros do Trovão", "Pizadeiro do Luffy"};
 
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
-bandasRegistradas.Add("Link Park", new List<int>{10, 8, 6});
+bandasRegistradas.Add("Linkin Park", new List<int>{10, 8, 6});
 bandasRegistradas.Add("Avenged Sevenfold", new List<int>{8, 9, 9, 10});
 bandasRegistradas.Add("Mamonas Assassinas", new List<int>());
 
@@ -95,9 +95,17 @@ void AvaliarBanda(){
     string bandaAvaliada = Console.ReadLine()!;
 
     if (bandasRegistradas.ContainsKey(bandaAvaliada)){
+        Console.Write($"Qual nota você quer dar para a {bandaAvaliada}?");
+        int nota = int.Parse(Console.ReadLine()!);
+        bandasRegistradas[bandaAvaliada].Add(nota);
+        Console.WriteLine($"\nA nota {nota} foi registrada com sucesso para a {bandaAvaliada}!");
 
+        Console.WriteLine("\nAperte qualquer tecla para retornar ao menu principal");
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
     } else  {
-        Console.WriteLine($"A banda {bandaAvaliada} não foi encontrada");
+        Console.WriteLine($"\n A banda {bandaAvaliada} não foi encontrada");
         Console.WriteLine("Aperte qualquer tecla para retornar ao menu principal");
         Console.ReadKey();
         Console.Clear();
