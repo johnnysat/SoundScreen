@@ -5,7 +5,7 @@ string mensagemBoasVindas = "Boas vindas ao Screen Sound";
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 bandasRegistradas.Add("Linkin Park", new List<int>{10, 8, 6});
 bandasRegistradas.Add("Avenged Sevenfold", new List<int>{8, 9, 9, 10});
-bandasRegistradas.Add("Mamonas Assassinas", new List<int>());
+bandasRegistradas.Add("Mamonas Assassinas", new List<int>{10, 1, 7});
 
 
 
@@ -125,7 +125,7 @@ void MediaBanda()
         if (notas.Count > 0)
         {
             double media = notas.Average();
-            Console.WriteLine($"A média das notas da banda {nomeDaBanda} é: {media}");
+            Console.WriteLine($"A média das notas da banda {nomeDaBanda} é: {media.ToString("0.00")}");
         }
         else
         {
