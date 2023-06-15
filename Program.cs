@@ -89,6 +89,20 @@ void MostrarBandasRegistradas(){
 void AvaliarBanda(){
     //Escolher banda que deseja avaliar
     //Atribuir uma nota
+    Console.Clear();
+    Console.WriteLine("Avalie sua banda");
+    Console.Write("Digite qual banda deseja avaliar: ");
+    string bandaAvaliada = Console.ReadLine()!;
+
+    if (bandasRegistradas.ContainsKey(bandaAvaliada)){
+
+    } else  {
+        Console.WriteLine($"A banda {bandaAvaliada} não foi encontrada");
+        Console.WriteLine("Aperte qualquer tecla para retornar ao menu principal");
+        Console.ReadKey();
+        ExibirOpcoesDoMenu();
+    }
+    
 }
 
 ExibirLogo();
